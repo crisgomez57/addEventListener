@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1><u>Eventos</u></h1> 
+
+    <!-- keypress -->
+    <div>
+        <p><code>keypress</code> Presiona cualquier tecla para cambiar el emoji</p>
+        <input type="text" id="emojiInput" maxlength="200">
+        <span id="emojiResult" style="font-size: 32px;">😄</span>
+    </div>
+    <br>
+    <!-- mousedown mousemove mouseout mouseup -->
+    <div>
+        <code>mouse</code>
+        <p>mousedown: El usuario presiona el botón del ratón en un elemento (aporreado)</p>
+        <p>mousemove: El usuario mueve el puntero del ratón sobre un elemento (cosquillas)</p>
+        <p>mouseout: El usuario mueve el puntero fuera de un elemento (triste)</p>
+        <p>mouseup: El usuario libera el botón pulsado del ratón sobre un elemento (sorpresa)</p>
+        <img src="img/mouseout_triste.png" alt="" id="img">
+    </div>
+
+    <!-- mouseover -->
+    <div>
+        <p><code>mouseover</code> No choques con las tuberías</p>
+        <button id="reset">Reiniciar</button>
+        <div id="background">
+            <span id="dieCount">MUERTES: 0</span>
+            <div id="obstacles">
+                <div class="pipes">
+                    <div class="pipeHitBox down">
+                        <img class="pipe down" alt="pipe" src="https://github.com/samuelcust/flappy-bird-assets/blob/master/sprites/pipe-green.png?raw=true">
+                    </div>
+                    <div class="pipeHitBox">
+                        <img class="pipe" alt="pipe" src="https://github.com/samuelcust/flappy-bird-assets/blob/master/sprites/pipe-green.png?raw=true">
+                    </div>
+                </div>
+                <div  id="message" hidden> <!-- hidden = elemento oculto -->
+                    <span>PERDISTE</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- blur and focus -->
+    <div>
+        <p><code>blur and focus</code> Seleccione la entrada para dar foco y cambiar color</p>
+        <input type="text" id="foco" placeholder="Click Aquí">
+    </div>
+
+    <!-- click -->
+    <div>
+        <p id="titulo"><code>click</code> Dar click para cambiar el color del texto</p>
+        <button id="rojo">ROJO</button> <button id="azul">AZUL</button>
+    </div>
+</body>
+<script src="add.js"></script>
+</html>
